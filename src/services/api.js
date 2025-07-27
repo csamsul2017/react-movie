@@ -1,4 +1,4 @@
-const API_KEY = '77121cef61f0aed856ce5668d57714f7';
+const API_KEY = '8c3adfba76600463e365bb7a027fdb15';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const getPopularMovies = async () => {
@@ -8,7 +8,7 @@ export const getPopularMovies = async () => {
 };
 
 export const searchMovies = async query => {
-  const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}$query=${encodeURIComponent(query)}`);
+  const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
   const data = await response.json();
   return data.results;
 };
