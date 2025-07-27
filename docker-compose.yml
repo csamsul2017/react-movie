@@ -1,0 +1,9 @@
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-movie
+    ports:
+      - '8080:80'
+    restart: unless-stopped
